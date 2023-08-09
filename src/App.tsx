@@ -59,6 +59,7 @@ function App() {
     tooltip: {
       trigger: "item",
       formatter: function (params) {
+        if (!params.data.value) return undefined;
         let info = `${params.name}: ${params.value}`;
 
         // 如果数据项有probes属性，则展示它们
